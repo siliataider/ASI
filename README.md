@@ -73,6 +73,8 @@ Le retour d'une vue affichant une poney est controlée par le __RequestCrt.java 
             return "poneyView";
         }
     ...
-la page __poneyView.html__ qui va être appelée lors de l'appel de la route __/view__ a ensuite été créée dans le dossier __templates__.
 ```
+La page __poneyView.html__ qui va être appelée lors de l'appel de la route __/view__ a ensuite été créée dans le dossier __templates__.
+
+On voit bien la séparation entre les diffèrentes parties, la vue qui est présente dans le répertoire __templates__, les modèles dans le paquet __com.sp.model__ et le controller dans le paquet __com.sp.controller__ 
 
