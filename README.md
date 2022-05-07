@@ -16,7 +16,7 @@
 
 
 ## Les éléments non-réalisés du cahier des charges
-* Nada
+* Appliquer le tutoriel au TP pour la partie du web dynamique.
 
 ## Des éléments éventuels réalisés en plus du cahier des charges
 * Nada      
