@@ -21,7 +21,8 @@
 ## Des éléments éventuels réalisés en plus du cahier des charges
 * Nada    
 
-## En quoi est ce que le web dynamique est-il plus onteressant que le web statique?
+## En quoi est ce que le web dynamique est-il plus interessant que le web statique?
+
 Contrairement à un site statique, un site dynamique utilise un language de programmation dynamique (en l'occurence java), et utilise en général une base de données pour stocker les ressources qui constitueront par la suite ses pages HTML.
 Un site web dynamique est surtout un site Internet dont les pages sont créées "dynamiquement" en fonction des requêtes des internautes.
 
@@ -33,3 +34,45 @@ Comparé au web statique, le web dynamique (même si plus long pour charger les 
 * n'a pas de difficulté à gérer un grand nombre de clients en même temps.
 * beaucoup plus pratique et moins cher à maintenir, même si le cout de développement initial est plus important.
 * utilise des bases de données.
+
+## En quoi nos prototypes respectent le modèle MVC ?
+
+**MVC** (Model-View-Controller ou Modèle-Vue-Contrôleur) est un modèle dans la conception de logiciels. Il met l'accent sur la séparation entre la logique métier et l'affichage du logiciel. Cette «séparation des préoccupations» permet une meilleure répartition du travail et une maintenance améliorée.
+
+1. Model (modèle) : gère les données et la logique métier.
+2. View (vue) : gère la disposition et l'affichage.
+3. Controller (contrôleur) : achemine les commandes des parties "model" et "view".
+
+Dans le premier atelier réalisé au sein de ce module, l'implémentation du modèle MVC a bien été mise en évidence grâce à la création de différents paquets : le __com.sp.controller__, le __com.sp.model__ ainsi que les répértoires __src/main/resources/templates__ et __src/main/resources/static__
+
+Le controller HTTP (controller qui peut intercepter les requètes HTTP) avait pour objectif la définition des routes (endpoint) et par suite l'affichage des pages dynamiquement complétées (templating). Le cycle de vie de ce dernier est géré par SpringBoot.
+* La définition des routes se fait dans le fichier __RequestCrt.java__ 
+
+``` java
+...
+  @RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
+  public String index(Model model) {
+  	model.addAttribute("messageLocal", messageLocal);
+  	return "index";
+  }
+...
+
+```
+Dans ce cas, une page __index.html__ a été créée dans le dossier templates et qui va être appelée par le controller et affichée sur le navigateur.
+
+La création de modèles se fait dans le paquet __com.sp.model__, dans notre cas, on a créé un premier modèle de Poney et son controller __PoneyDao.java__ dans le paquet __com.sp.controller__ pour qu'il puisse intéragir avec le modèle.
+Le retour d'une vue affichant une poney est controlée par le __RequestCrt.java __
+``` java
+
+      @Autowired
+      PoneyDao poneyDao;
+    ...
+     	@RequestMapping(value = { "/view"}, method = RequestMethod.GET)
+          public String view(Model model) {
+          model.addAttribute("myPoney",poneyDao.getRandomPoney() );
+            return "poneyView";
+        }
+    ...
+la page __poneyView.html__ qui va être appelée lors de l'appel de la route __/view__ a ensuite été créée dans le dossier __templates__.
+```
+
