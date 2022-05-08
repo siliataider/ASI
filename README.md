@@ -27,6 +27,13 @@
 ## Des éléments éventuels réalisés en plus du cahier des charges
 * Nada.
 
+
+
+La comparaison ci-dessous est aussi disponible dans le pdf Comparaison Web Statique et Web Dynamique.pdf
+disponible dans le dossier.
+
+
+
 ## En quoi est ce que le web dynamique est-il plus interessant que le web statique ?
 
 Contrairement à un site statique, un site dynamique utilise un language de programmation dynamique (en l'occurence java), et utilise en général une base de données pour stocker les ressources qui constitueront par la suite ses pages HTML.
