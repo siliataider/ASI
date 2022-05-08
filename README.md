@@ -61,7 +61,7 @@ Le controller HTTP (controller qui peut intercepter les requètes HTTP) avait po
 Dans ce cas, une page __index.html__ a été créée dans le dossier templates et qui va être appelée par le controller et affichée sur le navigateur.
 
 La création de modèles se fait dans le paquet __com.sp.model__, dans notre cas, on a créé un premier modèle de Poney et son controller __PoneyDao.java__ dans le paquet __com.sp.controller__ pour qu'il puisse intéragir avec le modèle.
-Le retour d'une vue affichant une poney est controlée par le __RequestCrt.java __
+Le retour d'une vue affichant un poney est controlée par le __RequestCrt.java __
 ``` java
 
       @Autowired
