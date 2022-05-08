@@ -5,7 +5,7 @@
 * TAIDER Silia.
 * BEN SALAH Mariem.
 * BOITEUX Baptise.
-* JOACHIN Louis.
+* MESSIE Louis.
 
 ## Les éléments réalisés du cahier des charges
 
