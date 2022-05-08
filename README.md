@@ -14,14 +14,20 @@
 * Création d'un formulaire de saisie d’informations.
 * Affichage d’une carte en Web Dynamique en utilisant les informations saisies dans le formulaire.
 
+### Partie Web Statique
+* Utilisation de JavaScript, AJAX et des requêtes HTTP.
+* Création d'un formulaire de saisie d'informations.
+* Envoi des données saisies dans un formulaire au serveur.
+* Affichage des cartes stockées sur le serveur.
+
 
 ## Les éléments non-réalisés du cahier des charges
 * Appliquer le tutoriel au TP pour la partie du web dynamique.
 
 ## Des éléments éventuels réalisés en plus du cahier des charges
-* Nada    
+* Nada.
 
-## En quoi est ce que le web dynamique est-il plus interessant que le web statique?
+## En quoi est ce que le web dynamique est-il plus interessant que le web statique ?
 
 Contrairement à un site statique, un site dynamique utilise un language de programmation dynamique (en l'occurence java), et utilise en général une base de données pour stocker les ressources qui constitueront par la suite ses pages HTML.
 Un site web dynamique est surtout un site Internet dont les pages sont créées "dynamiquement" en fonction des requêtes des internautes.
@@ -34,6 +40,13 @@ Comparé au web statique, le web dynamique (même si plus long pour charger les 
 * n'a pas de difficulté à gérer un grand nombre de clients en même temps.
 * beaucoup plus pratique et moins cher à maintenir, même si le cout de développement initial est plus important.
 * utilise des bases de données.
+
+## En quoi le web statique est-il plus intéressant que le web dynamique ?
+
+Le web statique présente comme avantage d'être beaucoup plus léger pour le serveur. En effet, contrairement au web dynamique, le serveur n'a ici qu'à répondre aux requêtes HTTP effectuées par le web browser du client (ici dans la partie JavaScript).
+
+On pourra également penser à la facilité de programmation du web statique. Cette facilité est cependant nuancée sur le long terme, car comme souligné plus haut, le web dynamique est plus facile à mettre à jour.
+
 
 ## En quoi nos prototypes respectent le modèle MVC ?
 
@@ -76,5 +89,15 @@ Le retour d'une vue affichant un poney est controlée par le __RequestCrt.java _
 ```
 La page __poneyView.html__ qui va être appelée lors de l'appel de la route __/view__ a ensuite été créée dans le dossier __templates__.
 
-On voit bien la séparation entre les diffèrentes parties, la vue qui est présente dans le répertoire __templates__, les modèles dans le paquet __com.sp.model__ et le controller dans le paquet __com.sp.controller__ 
+On voit bien la séparation entre les diffèrentes parties, la vue qui est présente dans le répertoire __templates__, les modèles dans le paquet __com.sp.model__ et le controller dans le paquet __com.sp.controller__
+
+Dans le cas du prototype réalisé en statique, on respecte moins le modèle MVC : 
+
+1. La vue est réalisée par le HTML et le CSS.
+2. Le controlleur est représenté par les requêtes HTTP, réalisées par le JavaScript.
+3. Le modèle est également réalisé par la réception des données du formulaire et l'affichage des données de la carte par le JavaScript.
+
+
+
+
 
